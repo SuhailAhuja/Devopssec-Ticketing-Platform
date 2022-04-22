@@ -160,7 +160,7 @@ def complaints(request):
         
         complaint_form=ComplaintForm(request.POST)
     context={'complaint_form':complaint_form,}
-    return render(request,'Grsystem/comptotal.html',context)
+    return render(request,'comptotal.html',context)
         
 
 @login_required
