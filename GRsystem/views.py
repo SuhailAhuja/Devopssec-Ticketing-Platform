@@ -155,12 +155,12 @@ def complaints(request):
                savethecomplaint.save()
                
                messages.add_message(request,messages.SUCCESS, f'NCI support has received your complaint.We will get back to you Soon!!!')
-               return render(request,'comptotal.html',)
+               return render(request,'Grsystem/templates/GRsystem/comptotal.html',)
     else:
         
         complaint_form=ComplaintForm(request.POST)
     context={'complaint_form':complaint_form,}
-    return render(request,'comptotal.html',context)
+    return render(request,'Grsystem/templates/GRsystem/comptotal.html',context)
         
 
 @login_required
@@ -169,7 +169,7 @@ def list(request):
     result=Complaint.objects.filter(user=request.user).exclude(Q(status='3') | Q(status='2'))
     #c=Complaint.objects.all()
     args={'c':c,'result':result}
-    return render(request,'Grsystem/Complaints.html',args)
+    return render(request,'GRsystem/Complaints.html',args)
 @login_required
 def slist(request):
     result=Complaint.objects.filter(user=request.user).exclude(Q(status='3') | Q(status='2'))
