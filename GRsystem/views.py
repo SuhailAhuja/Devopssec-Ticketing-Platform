@@ -155,7 +155,7 @@ def complaints(request):
                savethecomplaint.save()
                
                messages.add_message(request,messages.SUCCESS, f'NCI support has received your complaint.We will get back to you Soon!!!')
-               return render(request,'GRsystem/comptotal.html',)
+               return render(request,'comptotal.html',)
     else:
         
         complaint_form=ComplaintForm(request.POST)
