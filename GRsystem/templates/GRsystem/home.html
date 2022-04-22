@@ -1,0 +1,45 @@
+{% extends "GRsystem/index.html" %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+{% block content %}
+<style>
+body
+{
+
+    background-color: #007bff ;
+    
+}
+img{
+  width:100%;
+  height:100%;
+}
+.card
+{
+  border:#007bff !important;
+}
+</style>
+          {% load static %}
+  
+
+<div class="card bg-info text-white">
+    
+                <div class="ml-2">
+                <p style="color:white;bg-info; font-size:30px;"> <b>NCI Student/Staff Support</b></p>
+ </div>
+<center>
+
+        <img src="https://www.ncirl.ie/Portals/0/Images/650x366-Cards-Teasers-Inners/NCI%20Support%20Hub%20Banner.jpg" class="d-block w-80" alt="...">
+  
+
+
+</center>
+
+  {% endblock %}
